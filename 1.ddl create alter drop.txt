@@ -1,0 +1,83 @@
+
+mysql> create database student;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use student;
+Database changed
+mysql> create table student
+    -> (std_id int(5),
+    -> gender char(5),
+    -> phone int(15),
+    -> dob date,
+    -> department char(20));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc student;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| std_id     | int(5)   | YES  |     | NULL    |       |
+| gender     | char(5)  | YES  |     | NULL    |       |
+| phone      | int(15)  | YES  |     | NULL    |       |
+| dob        | date     | YES  |     | NULL    |       |
+| department | char(20) | YES  |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> alter table student
+    -> add column year int(5);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| std_id     | int(5)   | YES  |     | NULL    |       |
+| gender     | char(5)  | YES  |     | NULL    |       |
+| phone      | int(15)  | YES  |     | NULL    |       |
+| dob        | date     | YES  |     | NULL    |       |
+| department | char(20) | YES  |     | NULL    |       |
+| year       | int(5)   | YES  |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> alter table student
+    -> drop column department;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| std_id | int(5)  | YES  |     | NULL    |       |
+| gender | char(5) | YES  |     | NULL    |       |
+| phone  | int(15) | YES  |     | NULL    |       |
+| dob    | date    | YES  |     | NULL    |       |
+| year   | int(5)  | YES  |     | NULL    |       |
++--------+---------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
